@@ -1,5 +1,6 @@
 package com.dev.projectpoo.entity;
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "mt_product")
@@ -14,51 +15,67 @@ public class ProductEntity {
         private String name;
 
         @Column(name = "price")
-        private String price;
+        private int price;
 
         @Column(name = "stock")
-        private String stock;
+        private int stock;
 
+        @Column(name = "date")
+        private Date firstDate = new Date();;
 
         public ProductEntity() {
         }
 
-        public ProductEntity(Long id, String name, String price, String stock) {
+        public ProductEntity(Long id, String name, int price, int stock, Date firstDate) {
             this.id = id;
             this.name = name;
             this.price = price;
             this.stock = stock;
+            this.firstDate = firstDate;
         }
 
         public Long getId() {
+
             return id;
         }
 
         public void setId(Long id) {
+
             this.id = id;
         }
 
+        public Date getDate(){
+
+            return firstDate;
+        }
+
         public String getName() {
+
             return name;
         }
 
         public void setName(String name) {
+
             this.name = name;
         }
 
-        public String getPrice() {
+        public int getPrice() {
+
             return price;
         }
 
-        public void setPrice(String price) {
+        public void setPrice(int price) {
+
             this.price = price;
         }
 
-        public String getStock() {
+        public int getStock() {
+
             return stock;
         }
 
-        public void setStock(String stock) {
+        public void setStock(int stock) {
+
             this.stock = stock;
         }
 
