@@ -1,6 +1,7 @@
 package com.dev.projectpoo.entity;
 import javax.persistence.*;
 import java.util.Date;
+import java.text.SimpleDateFormat;
 
 @Entity
 @Table(name = "mt_product")
@@ -15,23 +16,25 @@ public class ProductEntity {
         private String name;
 
         @Column(name = "price")
-        private int price;
+        private double price;
 
         @Column(name = "stock")
         private int stock;
 
         @Column(name = "date")
-        private Date firstDate = new Date();;
+        Date date = new Date();
+        SimpleDateFormat DateFor = new SimpleDateFormat("dd/MM/yyyy");
+        String stringDate= DateFor.format(date);
 
         public ProductEntity() {
         }
 
-        public ProductEntity(Long id, String name, int price, int stock, Date firstDate) {
+        public ProductEntity(Long id, String name, Double price, int stock, String stringDate) {
             this.id = id;
             this.name = name;
             this.price = price;
             this.stock = stock;
-            this.firstDate = firstDate;
+            this.stringDate = stringDate;
         }
 
         public Long getId() {
@@ -44,9 +47,14 @@ public class ProductEntity {
             this.id = id;
         }
 
-        public Date getDate(){
+        public void setData(String stringDate){
 
-            return firstDate;
+            this.stringDate = stringDate;
+        }
+
+        public String getDate(){
+
+            return stringDate;
         }
 
         public String getName() {
@@ -59,12 +67,12 @@ public class ProductEntity {
             this.name = name;
         }
 
-        public int getPrice() {
+        public Double getPrice() {
 
             return price;
         }
 
-        public void setPrice(int price) {
+        public void setPrice(Double price) {
 
             this.price = price;
         }
