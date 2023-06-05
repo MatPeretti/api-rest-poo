@@ -8,7 +8,6 @@ import java.text.SimpleDateFormat;
 public class ProductEntity {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "product_id")
         private Long id;
 
@@ -86,6 +85,5 @@ public class ProductEntity {
 
             this.stock = stock;
         }
-
 }
 
