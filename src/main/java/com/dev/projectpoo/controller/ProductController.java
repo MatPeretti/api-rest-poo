@@ -2,6 +2,8 @@ package com.dev.projectpoo.controller;
 
 import com.dev.projectpoo.entity.ProductEntity;
 import com.dev.projectpoo.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,6 +35,7 @@ public class ProductController {
 
     @PostMapping
     public ProductEntity saveProduct(@RequestBody ProductEntity productEntity) {
+
         return productService.saveProduct(productEntity);
     }
 
