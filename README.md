@@ -14,9 +14,9 @@ The PostgreSQL database schema includes the following table:
 # API Endpoints
 The API provides the following endpoints:
 
+- POST /product: Add a new product.
 - GET /product: Retrieve a list of all products.
 - GET /product/{id}: Get details of a specific product by ID.
-- POST /product: Add a new product.
 - PUT /product/{id}: Update product details.
 - DELETE /product/{id}: Delete a product.
 
