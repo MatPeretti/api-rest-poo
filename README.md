@@ -1,5 +1,5 @@
 # Project preview
-The "api-rest-poo" is a Java-based RESTful API developed using Spring Boot and PostgreSQL. It is designed to be used by confectioners to manage their product inventory effectively, as a part of a college project. The API provides essential CRUD (Create, Read, Update, Delete) operations through the /product endpoint.
+The "api-rest-poo" is a Java-based RESTful API developed using Spring Boot and PostgreSQL. It is designed to be used by confectioners to manage their product inventory effectively, as a part of a college assignment. The API provides essential CRUD (Create, Read, Update, Delete) operations through the /product endpoint.
 
 # Introduction
 The project was developed as part of a college assignment, aiming to create a real-use back-end system with a focus on learning the functioning and creation of an API from scratch.
